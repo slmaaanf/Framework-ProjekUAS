@@ -105,6 +105,17 @@ Route::get('/events/{event}/register', [RegistrationController::class, 'create']
 // Rute untuk menyimpan pendaftaran
 Route::post('/registrations/{event}', [RegistrationController::class, 'store'])->name('registrations.store');
 
+Route::get('/setup-db', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate:fresh', [
+            '--seed' => true,
+            '--force' => true
+        ]);
+        return "BERHASIL! Seluruh tabel database sudah dibangun dan diisi data awal.";
+    } catch (\Exception $e) {
+        return "ERROR: " . $e->getMessage();
+    }
+});
 
 // Include Auth Routes
 require __DIR__ . '/auth.php';
