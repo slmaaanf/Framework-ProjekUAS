@@ -107,11 +107,19 @@ Route::post('/registrations/{event}', [RegistrationController::class, 'store'])-
 
 Route::get('/setup-db', function () {
     try {
-        \Illuminate\Support\Facades\Artisan::call('migrate:fresh', [
-            '--seed' => true,
-            '--force' => true
-        ]);
-        return "BERHASIL! Seluruh tabel database sudah dibangun dan diisi data awal.";
+        // 1. Reset dan bangun ulang seluruh struktur tabel (kosong tanpa seed otomatis)
+        \Illuminate\Support\Facades\Artisan::call('migrate:fresh', ['--force' => true]);
+        
+        // 2. Paksa isi tabel KATEGORI lebih dulu (Wajib No. 1 agar ID 1 tersedia!)
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => 'CategorySeeder', '--force' => true]);
+        
+        // 3. Paksa isi tabel USER untuk akun login
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => 'UserSeeder', '--force' => true]);
+        
+        // 4. Terakhir, baru isi tabel ACARA/EVENT (sekarang ID Kategori pasti sudah ada)
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => 'EventSeeder', '--force' => true]);
+        
+        return "BERHASIL 100%! Seluruh tabel (Kategori, User, dan Event) sudah berhasil dibangun dengan urutan yang sempurna.";
     } catch (\Exception $e) {
         return "ERROR: " . $e->getMessage();
     }
