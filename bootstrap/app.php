@@ -41,15 +41,15 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
-/*
-|--------------------------------------------------------------------------
-| Return The Application
-|--------------------------------------------------------------------------
-|
-| This script returns the application instance. The instance is given to
-| the calling script so we can separate the building of the instances
-| from the actual running of the application and sending responses.
-|
-*/
+// --- TAMBAHAN KHUSUS VERCEL SERVERLESS ---
+$app->useStoragePath('/tmp/storage');
+$app->useBootstrapPath('/tmp/bootstrap');
+
+foreach (['/tmp/storage/logs', '/tmp/storage/framework/views', '/tmp/storage/framework/cache', '/tmp/bootstrap/cache'] as $dir) {
+    if (!is_dir($dir)) {
+        mkdir($dir, 0755, true);
+    }
+}
+// -----------------------------------------
 
 return $app;
