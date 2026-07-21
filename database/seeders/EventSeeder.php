@@ -97,7 +97,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-07-15 18:00:00',
             'category_id' => 5, // Pameran
             'is_online' => true,
-            'image' => 'images/events/game_indie.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCt0INHrFlN26t7FoSblHoP_J-bLFRzlglvyisz-3osQ&s=10',
             'price' => 0,
             'location' => 'Online via Discord',
         ]);
@@ -110,7 +110,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-07-20 15:00:00',
             'category_id' => 3, // Workshop
             'is_online' => false,
-            'image' => 'images/events/film_workshop.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaqqZFoYNacwMmxTxku_H6lu98THpdhRgIFzayFRUzw&s=10',
             'price' => 125000,
             'location' => 'Kampus Seni Film Jakarta',
         ]);
@@ -123,7 +123,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-08-01 18:00:00',
             'category_id' => 4, // Kompetisi
             'is_online' => false,
-            'image' => 'images/events/catur_turnamen.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNyV-GcaIHbv_dYn7V8yPd_WyQCLKhXbaV3tKXzWH6nw&s=10',
             'price' => 0,
             'location' => 'Gedung Olahraga Bandung',
         ]);
@@ -136,7 +136,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-08-10 12:00:00',
             'category_id' => 1, // Seminar
             'is_online' => true,
-            'image' => 'images/events/blockchain_seminar.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQkOdjJqNc2wLDdx44YEDPUUnEhWLNgemDYTRbI9PRLQ&s=10',
             'price' => 60000,
             'location' => 'Online via Zoom',
         ]);
@@ -149,7 +149,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-08-20 23:00:00',
             'category_id' => 2, // Festival
             'is_online' => false,
-            'image' => 'images/events/teater_festival.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0GaR0bIeys8Kk46RWom1mdy_7EicgB06R6D5CYINvzw&s=10',
             'price' => 0,
             'location' => 'Gedung Kesenian Bali',
         ]);
@@ -162,7 +162,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-08-25 17:00:00',
             'category_id' => 5, // Pameran
             'is_online' => false,
-            'image' => 'images/events/produk_lokal.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcK9fTL0S3YxcKCYHieqlwSHbloOg49AORaVfahD-Yjg&s=10',
             'price' => 0,
             'location' => 'Mall Grand Indonesia, Jakarta',
         ]);
@@ -175,7 +175,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-09-01 16:00:00',
             'category_id' => 3, // Workshop
             'is_online' => true,
-            'image' => 'images/events/uiux_workshop.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_9y6v5wksZBbX9wQqTKFllsY9mm5-VDGueZcuSKJsSw&s=10',
             'price' => 85000,
             'location' => 'Online via Google Meet',
         ]);
@@ -188,7 +188,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-09-10 17:00:00',
             'category_id' => 4, // Kompetisi
             'is_online' => false,
-            'image' => 'images/events/karya_tulis.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyRhc-9EpZxkOpEUAh1-0K1_Yi1WsHXd1jbQu9tV3L9g&s=10',
             'price' => 0,
             'location' => 'Universitas Indonesia, Depok',
         ]);
@@ -201,7 +201,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-09-15 12:00:00',
             'category_id' => 1, // Seminar
             'is_online' => true,
-            'image' => 'images/events/kepemimpinan_seminar.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrq9Cr2U5qr6ESD1JV2m3vmdlGVSqV3YC7GwDFstCYVQ&s=10',
             'price' => 40000,
             'location' => 'Online via Zoom',
         ]);
