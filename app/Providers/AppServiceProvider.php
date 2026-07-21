@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Paksa HTTPS di lingkungan production (Vercel)
+        // Paksa HTTPS di lingkungan Vercel
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
         }
