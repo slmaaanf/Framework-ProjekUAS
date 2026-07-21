@@ -18,7 +18,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-02-01 12:00:00',
             'category_id' => 1, // Seminar
             'is_online' => true,
-            'image' => 'images/events/ai_seminar.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwiZ7BhRHsGfBqTviQqldk9eiN9mO_AVAqvQrLio9l2Q&s=10',
             'price' => 50000,
             'location' => 'Online via Zoom',
         ]);
@@ -32,7 +32,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-05-15 12:00:00',
             'category_id' => 1, // Seminar
             'is_online' => true,
-            'image' => 'images/events/kesehatan_mental.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbfgEEP7ajpANJGZbOoZPJP_N0Da578pZ-HwiePRxN4g&s=10',
             'price' => 30000,
             'location' => 'Online via Zoom',
         ]);
@@ -45,7 +45,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-06-01 22:00:00',
             'category_id' => 2, // Festival
             'is_online' => false,
-            'image' => 'images/events/festival_tari.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMf4k2Z8JtWlkka1EpWMEiXdlFBXm5cLzOyklD3xl6uA&s=10',
             'price' => 0,
             'location' => 'Gedung Kesenian Surabaya',
         ]);
@@ -58,7 +58,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-06-10 16:00:00',
             'category_id' => 3, // Workshop
             'is_online' => true,
-            'image' => 'images/events/workshop_cerita.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Fg9G405T5k-jyhOqX9Px5f9h_c4isgEr27xTLd2abg&s=10',
             'price' => 75000,
             'location' => 'Online via Microsoft Teams',
         ]);
@@ -71,7 +71,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-06-15 23:00:00',
             'category_id' => 2, // Festival
             'is_online' => false,
-            'image' => 'images/events/jazz_konser.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc4_TQv5SbYqtAh8-FzNS4WVm84qdQAISuBwPmcwnziQ&s=10',
             'price' => 100000,
             'location' => 'Teater Besar, Yogyakarta',
         ]);
@@ -84,7 +84,7 @@ class EventSeeder extends Seeder
             'end_time' => '2025-07-01 12:00:00',
             'category_id' => 1, // Seminar
             'is_online' => true,
-            'image' => 'images/events/web_programming.jpg',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBTgz_b_DW2ZY4445rSC6jJ2J2vTGE9c3-9xgGqrzQjw&s=10',
             'price' => 50000,
             'location' => 'Online via Zoom',
         ]);
