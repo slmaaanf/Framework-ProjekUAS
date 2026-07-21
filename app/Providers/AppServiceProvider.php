@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Http\Request;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,7 +21,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Paksa Laravel percaya pada proxy Vercel (Mengatasi Loop Redirect)
+        // Paksa HTTPS di lingkungan production (Vercel)
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
+
+        // Percaya pada proxy Vercel untuk mencegah loop redirect
         Request::setTrustedProxies(
             ['*'], 
             Request::HEADER_X_FORWARDED_FOR | 
