@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\URL;
+use Illuminate\Http\Request;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,10 +18,10 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(Request $request): void
+    public function boot(): void
     {
         // Paksa Laravel percaya pada proxy Vercel (Mengatasi Loop Redirect)
-        $request->setTrustedProxies(
+        Request::setTrustedProxies(
             ['*'], 
             Request::HEADER_X_FORWARDED_FOR | 
             Request::HEADER_X_FORWARDED_HOST | 
