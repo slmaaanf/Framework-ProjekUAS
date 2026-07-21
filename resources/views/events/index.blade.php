@@ -9,7 +9,7 @@
                         <div class="row align-items-center">
                             <!-- Gambar Event -->
                             <div class="col-md-3">
-                            <img src="{{ Str::startsWith($event->image, 'http') ? $event->image : asset('storage/' . $event->image) }}" alt="{{ $event->title }}" class="...">
+                            <img src="{{ Str::startsWith($event->image, 'http') ? $event->image : asset($event->image) }}" alt="{{ $event->title }}" class="...">
                             </div>
 
                             <!-- Detail Event -->
